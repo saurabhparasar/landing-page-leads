@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Landing Page New</title>
+
+    <link
+      rel="icon"
+      href="https://f2.leadsquaredcdn.com/t/zinedu/content/common/images/favicon.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      #news-slider {
+        margin-top: 0.5%;
+      }
+      .post-slide {
+        background: #fff;
+        margin: 20px 15px 20px;
+        padding-top: 1px;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.21);
+      }
+      .post-slide .post-img {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        margin: -12px 15px 8px 15px;
+        margin-left: -10px;
+      }
+      .post-slide .post-img img {
+        width: 100%;
+        height: auto;
+        transform: scale(1, 1);
+        transition: transform 0.2s linear;
+      }
+      .post-slide .over-layer {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        background: linear-gradient(
+          -45deg,
+          rgba(6, 190, 244, 0.75) 0%,
+          rgba(45, 112, 253, 0.6) 100%
+        );
+      }
+      .owl-carousel {
+        padding-left: 5%;
+        padding-right: 5%;
+      }
+      .post-slide {
+        width: 70%;
+        height: fit-content;
+      }
+      .post-slide .post-content {
+        background: #fff;
+        padding: 2px 20px 40px;
+        border-radius: 15px;
+      }
+      .post-slide .post-title a {
+        font-size: 15px;
+        font-weight: bold;
+        color: #333;
+        display: inline-block;
+        text-transform: uppercase;
+        transition: all 0.3s ease 0s;
+      }
+      .post-slide .post-description {
+        line-height: 24px;
+        color: #808080;
+        margin-bottom: 25px;
+      }
+      .post-slide .post-date {
+        color: #a9a9a9;
+        font-size: 14px;
+      }
+      .post-slide .post-date i {
+        font-size: 20px;
+        margin-right: 8px;
+        color: #cfdace;
+      }
+      .post-slide .read-more {
+        padding: 7px 20px;
+        float: right;
+        font-size: 12px;
+        background: #2196f3;
+        color: #ffffff;
+        box-shadow: 0px 10px 20px -10px #1376c5;
+        border-radius: 25px;
+        text-transform: uppercase;
+      }
+
+      .owl-controls .owl-buttons {
+        text-align: center;
+        margin-top: 20px;
+      }
+      .owl-controls .owl-buttons .owl-prev {
+        background: #fff;
+        position: absolute;
+        top: 30%;
+        left: 15px;
+        padding: 0 18px 0 15px;
+        border-radius: 50px;
+
+        transition: background 0.5s ease 0s;
+      }
+      .owl-controls .owl-buttons .owl-next {
+        background: #fff;
+        position: absolute;
+        top: 30%;
+        right: 15px;
+        padding: 0 15px 0 18px;
+        border-radius: 50px;
+
+        transition: background 0.5s ease 0s;
+      }
+      .owl-controls .owl-buttons .owl-prev:after,
+      .owl-controls .owl-buttons .owl-next:after {
+        content: "\f104";
+        font-family: FontAwesome;
+        color: #333;
+        font-size: 30px;
+      }
+      .owl-controls .owl-buttons .owl-next:after {
+        content: "\f105";
+      }
+      @media only screen and (max-width: 1280px) {
+        .post-slide .post-content {
+          padding: 0px 15px 25px 15px;
+        }
+      }
+      @media only screen and (max-width: 560px) {
+        .owl-carousel {
+          padding-left: 10%;
+          padding-right: 10%;
+          margin-right: 10%;
+        }
+      }
+    </style>
+    <style>
+      body {
+        font-family: Montserrat;
+        font-weight: 500;
+      }
+
+      .nav-container-web {
+        display: flex;
+      }
+
+      .first {
+        display: flex;
+        width: 85%;
+      }
+
+      .second {
+        width: 15%;
+      }
+
+      .mom-logo {
+        width: 90%;
+        margin: 10px;
+      }
+
+      .pow-logo {
+        width: 90%;
+        margin: 10px;
+      }
+
+      .location-boxes {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+
+      .loc {
+        border: 1px solid #d0cece;
+        text-transform: uppercase;
+        align-self: center;
+        font-size: 13px;
+      }
+
+      .faculty-row {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: row;
+      }
+
+      .loc-link,
+      .loc-link:hover,
+      .loc-link:focus {
+        text-decoration: none;
+        color: #000000;
+        cursor: pointer;
+      }
+
+      .second {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+      }
+
+      .contact-a,
+      .contact-a:hover,
+      .contact-a:focus {
+        text-decoration: none;
+      }
+
+      .contact-num {
+        color: #000000;
+        font-weight: 600;
+      }
+
+      .tag-line {
+        padding-left: 5%;
+        padding-right: 5%;
+      }
+
+      .iframe-cont {
+        border-radius: 13px;
+      }
+
+      .form-cont {
+        border: 0.25px solid #bab7b7;
+      }
+
+      .name-input,
+      .prefix,
+      .mobile-input,
+      .class-input {
+        font-size: 20px;
+        border: 0.25px solid #f0f0f0;
+        box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+      }
+
+      .prefix {
+        padding: 6px 0;
+      }
+
+      .check-box-dnc {
+        font-weight: 400;
+      }
+
+      input.chckbx {
+        width: 20px;
+        height: 20px;
+      }
+
+      .req-callback-btn,
+      .req-callback-btn:hover,
+      .req-callback-btn:focus {
+        color: #ffffff;
+        background-color: #f3970d;
+        font-size: 1.2em;
+        width: 90%;
+        font-weight: 600;
+        padding: 10px;
+      }
+
+      .footer {
+        background-color: #1e3061;
+        color: #ffffff;
+        font-weight: 400;
+        letter-spacing: 0.06em;
+        line-height: 46px;
+        font-size: 1.2em;
+      }
+
+      .center-img-1,
+      .center-img-2,
+      .center-img-3,
+      .center-img-4 {
+        padding: 2%;
+        width: 50%;
+        height: 18em;
+      }
+
+      .centers-desc {
+        padding-top: 2%;
+        height: 35em;
+        width: 100%;
+      }
+
+      .comp-rows {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .row1,
+      .row2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 0% 0.5% 0% 4%;
+      }
+
+      .comp-img {
+        width: 20%;
+        height: 5em;
+        margin-bottom: 7%;
+      }
+
+      .img1,
+      .img2,
+      .img4,
+      .img5 {
+        padding: 1% 1% 1% 1%;
+        margin-right: 7%;
+        width: 33%;
+      }
+      .img3,
+      .img6 {
+        margin-right: 1%;
+      }
+
+      .content-head {
+        font-weight: 500;
+        color: #000000;
+        line-height: 20px;
+        letter-spacing: -0.015em;
+      }
+      .content-desc {
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: -0.01em;
+      }
+      .map {
+        padding-left: 19%;
+        height: 37em;
+        width: 100%;
+      }
+
+      .part-logo {
+        width: 20%;
+      }
+
+      .img-container {
+        padding: 1% 5% 1% 5%;
+        display: flex;
+        justify-content: center;
+      }
+
+      .myclass-btn {
+        width: 8.5%;
+        height: 3.5em;
+        margin: 1% 1% 0 1%;
+        background: #ffffff;
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+        border-radius: 9px;
+        letter-spacing: 0.02em;
+        font-size: 1.1em;
+        line-height: 24px;
+      }
+
+      .myclass-btn:hover,
+      .myclass-btn:focus {
+        background: #1e3061;
+        color: #ffffff;
+      }
+      .myclass-btn:focus {
+        transform: scale(1.2);
+      }
+      .select-class {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+      .social-media {
+        width: 13%;
+        margin-right: 2%;
+        margin-left: 25%;
+        margin-bottom: 2%;
+        margin-top: 2.5%;
+      }
+
+      @media (max-width: 960px) {
+      }
+
+      @media (max-width: 560px) {
+        .tag-line {
+          font-size: 1.2em;
+          padding-left: 1%;
+          padding-right: 1%;
+        }
+
+        .vid-form {
+          padding: 4px 10px !important;
+        }
+
+        .experts {
+          font-size: 1.1em;
+        }
+
+        .name-input,
+        .prefix,
+        .mobile-input,
+        .class-input {
+          font-size: 1em;
+          border: 0.25px solid #f0f0f0;
+          box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+        }
+
+        .footer {
+          font-size: 0.46em;
+        }
+
+        .center-img-1 {
+          width: 65%;
+          height: 7.5em;
+          padding: 1.5%;
+        }
+
+        .center-img-2 {
+          width: 35%;
+          height: 7.5em;
+          padding: 1.5%;
+        }
+
+        .center-img-3 {
+          width: 35%;
+          height: 7.5em;
+          padding: 1.5%;
+        }
+
+        .center-img-4 {
+          width: 65%;
+          height: 7.5em;
+          padding: 1.5%;
+        }
+
+        .centers-desc {
+          margin-left: 10%;
+          width: 90%;
+          height: 18em;
+        }
+
+        .map {
+          width: 100%;
+          height: 25em;
+          padding-left: 5%;
+          padding-right: 5%;
+        }
+
+        .faculty-row {
+          width: 100%;
+          height: fit-content;
+          display: flex;
+          flex-direction: row;
+        }
+
+        .myclass-btn {
+          width: 23%;
+          height: 2.3em;
+          padding: 2%;
+          margin: 2% 2% 0 2%;
+        }
+
+        .row1,
+        .row2 {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .comp-rows {
+          display: flex;
+          flex-direction: row;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="nav-container-web mt-3">
+      <div class="first">
+        <div class="logos ml-4">
+          <div>
+            <img
+              src="https://f2.leadsquaredcdn.com/t/zinedu/content/common/images/aviral.png"
+              alt=""
+              class="mom-logo"
+            />
+          </div>
+          <div>
+            <img
+              src="https://f2.leadsquaredcdn.com/t/zinedu/content/common/images/myclass_pow.png"
+              alt=""
+              class="pow-logo"
+            />
+          </div>
+        </div>
+        <div class="location-boxes mt-2 ml-5">
+          <div class="loc-icon mr-2">
+            <img src="./loc-icon.png" alt="" class="" />
+          </div>
+          <div class="loc mx-2 py-1 px-3">
+            <a href="" class="loc-link"> Jabalpur-wright Town </a>
+          </div>
+          <div class="loc mx-2 py-1 px-3">
+            <a href="" class="loc-link"> Jabalpur-wright Town </a>
+          </div>
+          <div class="loc mx-2 py-1 px-3">
+            <a href="" class="loc-link"> Jabalpur-wright Town </a>
+          </div>
+          <div class="loc mx-2 py-1 px-3">
+            <a href="" class="loc-link"> Jabalpur-wright Town </a>
+          </div>
+          <div class="loc mx-2 py-1 px-3">
+            <a href="" class="loc-link"> Jabalpur-wright Town </a>
+          </div>
+          <div class="loc mx-2 py-1 px-3">
+            <a href="" class="loc-link"> Jabalpur-wright Town </a>
+          </div>
+        </div>
+      </div>
+      <div class="second">
+        <div class="contact mr-4">
+          <a href="tel:+919164 051 051" class="contact-a">
+            <span><i class="fa-solid fa-phone"></i></span>
+            <span class="contact-num">+919164051051</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <center>
+        <h3 class="tag-line my-4">
+          Legacy of <strong>8 years</strong> in helping students of Dehradun and
+          Uttarakhand secure top ranks in <strong>IIT-JEE and NEET</strong>
+        </h3>
+      </center>
+
+      <div class="vid-form row px-5">
+        <div class="col-md-7">
+          <div class="video-container">
+            <div class="iframe-cont embed-responsive embed-responsive-16by9">
+              <iframe
+                class="embed-responsive-item"
+                src="https://www.youtube.com/embed/Ky-k_hgx-sM"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <p class="text-left pl-1" style="font-size: 0.8em">2 min watch</p>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="form-cont p-2">
+            <h4 class="text-center my-4 experts">
+              <strong>Let our experts help you</strong>
+            </h4>
+
+            <form class="mt-5 mb-3 mx-4">
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control name-input"
+                  id="nameInput"
+                  placeholder="Name"
+                  required
+                />
+              </div>
+              <div class="form-group row my-0">
+                <div class="col-md-2 col-4">
+                  <p class="prefix text-center">+91</p>
+                </div>
+                <div class="col-md-10 col-8">
+                  <input
+                    type="text"
+                    class="form-control mobile-input"
+                    id="inputMobileNumber"
+                    placeholder="Mobile Number"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <select
+                  class="form-control class-input"
+                  id="classDropdownInput"
+                  placeholder="Class"
+                  required
+                >
+                  <option>Class</option>
+                  <option>8th</option>
+                  <option>9th</option>
+                  <option>10th</option>
+                  <option>11th</option>
+                  <option>12th</option>
+                </select>
+              </div>
+              <div class="form-group form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input chckbx mr-2"
+                  id="dncCheck"
+                  required
+                  checked
+                />
+                <label
+                  class="form-check-label check-box-dnc ml-2"
+                  for="dncCheck"
+                >
+                  I authorize myClassroom to Call, SMS, Email or WhatsApp me
+                  about its products. This consent overrides any registration
+                  for DNC / NDNC</label
+                >
+              </div>
+            </form>
+            <center>
+              <button class="btn req-callback-btn mb-4">
+                Request call back
+              </button>
+            </center>
+          </div>
+        </div>
+      </div>
+    </div>
+    <center>
+      <h3 class="tag-line pt-lg-5">
+        <strong>What our students have to say!</strong>
+      </h3>
+    </center>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div id="news-slider-03" class="owl-carousel">
+            <div class="post-slide">
+              <div class="post-content">
+                <h4 class="post-title">Andhra Pradesh</h4>
+                <p class="post-description">
+                  VISHAKAPATNAM D. No. 48-14-44/3, Anand Towers, Ramatalkies
+                  Road, Asilmetta
+                </p>
+              </div>
+            </div>
+
+            <div class="post-slide">
+              <div class="post-content">
+                <h4 class="post-title">Andhra Pradesh</h4>
+                <p class="post-description">
+                  VISHAKAPATNAM D. No. 48-14-44/3, Anand Towers, Ramatalkies
+                  Road, Asilmetta
+                </p>
+              </div>
+            </div>
+
+            <div class="post-slide">
+              <div class="post-content">
+                <h4 class="post-title">Andhra Pradesh</h4>
+                <p class="post-description">
+                  VISHAKAPATNAM D. No. 48-14-44/3, Anand Towers, Ramatalkies
+                  Road, Asilmetta
+                </p>
+              </div>
+            </div>
+
+            <div class="post-slide">
+              <div class="post-content">
+                <h4 class="post-title">Andhra Pradesh</h4>
+                <p class="post-description">
+                  VISHAKAPATNAM D. No. 48-14-44/3, Anand Towers, Ramatalkies
+                  Road, Asilmetta
+                </p>
+              </div>
+            </div>
+
+            <div class="post-slide">
+              <div class="post-content">
+                <h4 class="post-title">Andhra Pradesh</h4>
+                <p class="post-description">
+                  VISHAKAPATNAM D. No. 48-14-44/3, Anand Towers, Ramatalkies
+                  Road, Asilmetta
+                </p>
+              </div>
+            </div>
+
+            <div class="post-slide">
+              <div class="post-content">
+                <h4 class="post-title">Andhra Pradesh</h4>
+                <p class="post-description">
+                  VISHAKAPATNAM D. No. 48-14-44/3, Anand Towers, Ramatalkies
+                  Road, Asilmetta
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <center>
+      <h3 class="tag-line pt-lg-5 my-5">
+        <strong>myClassroom Faculty</strong>
+      </h3>
+    </center>
+    <div
+      class="row faculty-row d-flex my-5 flex-row"
+      style="background-color: #fef9f5"
+    >
+      <div class="d-flex flex-column col-lg-5 col-sm-3 p-2 text-center">
+        <h2 class="pl-4" style="color: #26235c; font-weight: 600">150+</h2>
+        <h4 class="pl-5" style="color: #252525; font-weight: 600">Faculty</h4>
+      </div>
+      <div class="d-flex flex-column col-lg-7 col-sm-6 p-2">
+        <h2 class="pl-5" style="color: #26235c; font-weight: 600">
+          AIR <span style="color: #252525; font-weight: 600"> 7,19,36,62</span>
+        </h2>
+        <h4 class="pl-5" style="color: #252525; font-weight: 600">
+          Delivered in JEE Advanced 2021
+        </h4>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div id="news-slider" class="owl-carousel">
+            <div class="post-slide">
+              <div class="post-content">
+                <h4 class="post-title">Andhra Pradesh</h4>
+                <p class="post-description">
+                  VISHAKAPATNAM D. No. 48-14-44/3, Anand Towers, Ramatalkies
+                  Road, Asilmetta
+                </p>
+              </div>
+            </div>
+
+            <div class="post-slide">
+              <div class="post-content">
+                <h4 class="post-title">Andhra Pradesh</h4>
+                <p class="post-description">
+                  VISHAKAPATNAM D. No. 48-14-44/3, Anand Towers, Ramatalkies
+                  Road, Asilmetta
+                </p>
+              </div>
+            </div>
+
+            <div class="post-slide">
+              <div class="post-content">
+                <h4 class="post-title">Andhra Pradesh</h4>
+                <p class="post-description">
+                  VISHAKAPATNAM D. No. 48-14-44/3, Anand Towers, Ramatalkies
+                  Road, Asilmetta
+                </p>
+              </div>
+            </div>
+
+            <div class="post-slide">
+              <div class="post-content">
+                <h4 class="post-title">Andhra Pradesh</h4>
+                <p class="post-description">
+                  VISHAKAPATNAM D. No. 48-14-44/3, Anand Towers, Ramatalkies
+                  Road, Asilmetta
+                </p>
+              </div>
+            </div>
+
+            <div class="post-slide">
+              <div class="post-content">
+                <h4 class="post-title">Andhra Pradesh</h4>
+                <p class="post-description">
+                  VISHAKAPATNAM D. No. 48-14-44/3, Anand Towers, Ramatalkies
+                  Road, Asilmetta
+                </p>
+              </div>
+            </div>
+
+            <div class="post-slide">
+              <div class="post-content">
+                <h4 class="post-title">Andhra Pradesh</h4>
+                <p class="post-description">
+                  VISHAKAPATNAM D. No. 48-14-44/3, Anand Towers, Ramatalkies
+                  Road, Asilmetta
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <center>
+      <h3 class="tag-line pt-lg-5 my-5">
+        <strong>Comprehensive learning</strong>
+      </h3>
+    </center>
+    <div class="comp-rows container-fluid">
+      <div class="row1">
+        <div class="img1">
+          <div>
+            <img src="./cl-1.png" alt="" class="comp-img" />
+            <p class="content-head">Never miss a class</p>
+          </div>
+          <p class="content-desc">
+            Get access to all the class recordings<br />
+            and notes
+          </p>
+        </div>
+        <div class="img2">
+          <div>
+            <img src="./cl-2.png" alt="" class="comp-img" />
+            <p class="content-head">Compete in real-time with peers</p>
+          </div>
+          <p class="content-desc">
+            Compete in real-time and Improve your grasp on concepts with
+            in-class quizzes
+          </p>
+        </div>
+        <div class="img3">
+          <div>
+            <img src="./cl-3.png" alt="" class="comp-img" />
+            <p class="content-head">Instant doubt solving</p>
+          </div>
+          <p class="content-desc">
+            Get your doubts cleared instantly with video solutions
+          </p>
+        </div>
+      </div>
+      <div class="row2">
+        <div class="img4">
+          <div>
+            <img src="./cl-3.png" alt="" class="comp-img" />
+            <p class="content-head">Instant doubt solving</p>
+          </div>
+          <p class="content-desc">
+            Consistent DPPs and tests with comprehensive reports
+          </p>
+        </div>
+        <div class="img5">
+          <div>
+            <img src="./cl-5.png" alt="" class="comp-img" />
+            <p class="content-head">Practice leads to perfection</p>
+          </div>
+          <p class="content-desc">
+            Unlimited practice sessions with AI driven insights
+          </p>
+        </div>
+        <div class="img6">
+          <div>
+            <img src="./cl-6.png" alt="" class="comp-img" />
+            <p class="content-head">Discipline is everything</p>
+          </div>
+          <p class="content-desc">
+            Regular reports to ensure discipline and track progress
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <center>
+      <h3 class="tag-line pt-lg-5 my-5">
+        <strong>myClassroom Centers</strong>
+      </h3>
+    </center>
+    <div class="row container-fluid center-container">
+      <div class="col-lg-6 pl-5">
+        <div class="d-flex">
+          <img
+            src="./center-1.png"
+            alt="myclassroom center"
+            class="center-img-1"
+          />
+          <img
+            src="./center-2.png"
+            alt="myclassroom center"
+            class="center-img-2"
+          />
+        </div>
+        <div class="d-flex">
+          <img
+            src="./center-3.png"
+            alt="myclassroom center"
+            class="center-img-3"
+          />
+          <img
+            src="./center-4.png"
+            alt="myclassroom center"
+            class="center-img-4"
+          />
+        </div>
+        <div></div>
+      </div>
+      <div class="col-lg-6">
+        <img src="./center-5.png" alt="center-desc" class="centers-desc" />
+      </div>
+    </div>
+    <center>
+      <h3 class="tag-line pt-lg-5 mt-5 mb-2">
+        <strong>myClassroom Courses</strong>
+      </h3>
+    </center>
+    <center>
+      <h4
+        class="tag-line pt-lg-5 text-center"
+        style="color: #6d6d6d; letter-spacing: -0.015em; font-size: 1.6em"
+      >
+        Select Class
+      </h4>
+    </center>
+    <div class="select-class">
+      <button type="button" class="btn myclass-btn"><strong>8</strong></button>
+      <button type="button" class="btn myclass-btn"><strong>9</strong></button>
+      <button type="button" class="btn myclass-btn"><strong>10</strong></button>
+      <button type="button" class="btn myclass-btn"><strong>11</strong></button>
+      <button type="button" class="btn myclass-btn"><strong>12</strong></button>
+    </div>
+
+    <center>
+      <h3 class="tag-line pt-lg-5 my-2">
+        <strong>myClassroom Partners</strong>
+      </h3>
+    </center>
+    <div class="row d-flex img-container">
+      <div class="col-lg-4 col-md-6 col-sm-6 d-flex justify-content-center">
+        <img
+          src="https://f2.leadsquaredcdn.com/t/zinedu/content/common/images/iit-medical.png"
+          alt=""
+          class="part-logo"
+        />
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-6 d-flex justify-content-center">
+        <img
+          src="https://f2.leadsquaredcdn.com/t/zinedu/content/common/images/Puruda_LOgo_1_.png"
+          alt=""
+          class="part-logo"
+        />
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-6 d-flex justify-content-center">
+        <img
+          src="https://f2.leadsquaredcdn.com/t/zinedu/content/common/images/Momentum%20orignal%20Logo-01%201.png"
+          alt=""
+          class="part-logo"
+        />
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-6 d-flex justify-content-center">
+        <img
+          src="https://f2.leadsquaredcdn.com/t/zinedu/content/common/images/aviral.png"
+          alt=""
+          class="part-logo"
+        />
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-6 d-flex justify-content-center">
+        <img
+          src="https://f2.leadsquaredcdn.com/t/zinedu/content/common/images/deeksha.png"
+          alt=""
+          class="part-logo"
+        />
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-6 d-flex justify-content-center">
+        <img
+          src="https://f2.leadsquaredcdn.com/t/zinedu/content/common/images/phonenix.png"
+          alt=""
+          class="part-logo"
+        />
+      </div>
+    </div>
+    <center>
+      <h3 class="tag-line pt-lg-5 my-5">
+        <strong>Locate us</strong>
+      </h3>
+    </center>
+    <div class="row">
+      <div class="col-lg-6">
+        <img src="./map.png" alt="" class="map" />
+      </div>
+      <div class="col-lg-6">
+        <div class="">
+          <div class="d-flex align-items-center">
+            <img src="./Instagram.png" alt="" class="social-media" />
+            <span>Instagram abcdedghij</span>
+          </div>
+          <div class="d-flex align-items-center">
+            <img src="./Twitter.png" alt="" class="social-media" />
+            <span>Twitter abcdedghij</span>
+          </div>
+          <div class="d-flex align-items-center">
+            <img src="./Linkedin.png" alt="" class="social-media" />
+            <span>Linkedin abcdedghij</span>
+          </div>
+          <div class="d-flex align-items-center">
+            <img src="./Facebook.png" alt="" class="social-media" />
+            <span>Facebook abcdedghij</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <center>
+      <h3 class="tag-line pt-lg-5 mt-5">
+        <strong>Locations</strong>
+      </h3>
+    </center>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div id="news-slider-02" class="owl-carousel">
+            <div class="post-slide">
+              <div class="post-content">
+                <h4 class="post-title">Andhra Pradesh</h4>
+                <p class="post-description">
+                  VISHAKAPATNAM D. No. 48-14-44/3, Anand Towers, Ramatalkies
+                  Road, Asilmetta
+                </p>
+              </div>
+            </div>
+
+            <div class="post-slide">
+              <div class="post-content">
+                <h4 class="post-title">Andhra Pradesh</h4>
+                <p class="post-description">
+                  VISHAKAPATNAM D. No. 48-14-44/3, Anand Towers, Ramatalkies
+                  Road, Asilmetta
+                </p>
+              </div>
+            </div>
+
+            <div class="post-slide">
+              <div class="post-content">
+                <h4 class="post-title">Andhra Pradesh</h4>
+                <p class="post-description">
+                  VISHAKAPATNAM D. No. 48-14-44/3, Anand Towers, Ramatalkies
+                  Road, Asilmetta
+                </p>
+              </div>
+            </div>
+
+            <div class="post-slide">
+              <div class="post-content">
+                <h4 class="post-title">Andhra Pradesh</h4>
+                <p class="post-description">
+                  VISHAKAPATNAM D. No. 48-14-44/3, Anand Towers, Ramatalkies
+                  Road, Asilmetta
+                </p>
+              </div>
+            </div>
+
+            <div class="post-slide">
+              <div class="post-content">
+                <h4 class="post-title">Andhra Pradesh</h4>
+                <p class="post-description">
+                  VISHAKAPATNAM D. No. 48-14-44/3, Anand Towers, Ramatalkies
+                  Road, Asilmetta
+                </p>
+              </div>
+            </div>
+
+            <div class="post-slide">
+              <div class="post-content">
+                <h4 class="post-title">Andhra Pradesh</h4>
+                <p class="post-description">
+                  VISHAKAPATNAM D. No. 48-14-44/3, Anand Towers, Ramatalkies
+                  Road, Asilmetta
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p class="text-center footer">
+        H.O. : 8th Floor, Raina Towers, Plot No.94, Sector 136, Noida, Uttar
+        Pradesh
+      </p>
+    </footer>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#news-slider").owlCarousel({
+          items: 3,
+          itemsDesktop: [1199, 3],
+          itemsDesktopSmall: [980, 2],
+          itemsMobile: [600, 1],
+          navigation: true,
+          navigationText: ["", ""],
+          pagination: true,
+          responsive: {
+            0: {
+              items: 1,
+            },
+            480: {
+              items: 2,
+            },
+            767: {
+              items: 3,
+            },
+            992: {
+              items: 3,
+            },
+            1200: {
+              items: 4,
+            },
+          },
+        });
+      });
+      $(document).ready(function () {
+        $("#news-slider-02").owlCarousel({
+          items: 3,
+          itemsDesktop: [1199, 3],
+          itemsDesktopSmall: [980, 2],
+          itemsMobile: [600, 1],
+          navigation: true,
+          navigationText: ["", ""],
+          pagination: true,
+          responsive: {
+            0: {
+              items: 1,
+            },
+            480: {
+              items: 2,
+            },
+            767: {
+              items: 3,
+            },
+            992: {
+              items: 3,
+            },
+            1200: {
+              items: 4,
+            },
+          },
+        });
+      });
+      $(document).ready(function () {
+        $("#news-slider-03").owlCarousel({
+          items: 3,
+          itemsDesktop: [1199, 3],
+          itemsDesktopSmall: [980, 2],
+          itemsMobile: [600, 1],
+          navigation: true,
+          navigationText: ["", ""],
+          pagination: true,
+          responsive: {
+            0: {
+              items: 1,
+            },
+            480: {
+              items: 2,
+            },
+            767: {
+              items: 3,
+            },
+            992: {
+              items: 3,
+            },
+            1200: {
+              items: 4,
+            },
+          },
+        });
+      });
+    </script>
+  </body>
+</html>
