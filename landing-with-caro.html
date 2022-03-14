@@ -151,8 +151,8 @@
         background: #fff;
         position: absolute;
         top: 35%;
-        right: 15px;
-        padding: 0 15px 0 18px;
+        right: -13px;
+        padding: 0 8px 0 18px;
         border-radius: 50px;
 
         transition: background 0.5s ease 0s;
@@ -376,7 +376,7 @@
 
       .map {
         padding-left: 10%;
-        height: 37em;
+        height: 40em;
         width: 100%;
       }
 
@@ -455,11 +455,25 @@
         border-radius: 3px;
         display: flex;
         flex-direction: row;
+        justify-content: center;
         width: 28%;
         height: 6em;
         margin: 1%;
       }
-
+      .feat-img {
+        width: 100%;
+      }
+      .feat-img-container {
+        margin-right: 4%;
+      }
+      .feat-content {
+        margin-top: 6%;
+        margin-left: 1%;
+      }
+      .cont-head {
+        margin-bottom: 0px;
+        font-weight: 600;
+      }
       @media (max-width: 960px) {
         .location-boxes-mob {
           display: none;
@@ -579,6 +593,55 @@
           display: flex;
           flex-direction: row;
         }
+        .feature-rows {
+          margin-top: 10%;
+          display: flex;
+          flex-direction: row;
+        }
+        .feature-row1,
+        .feature-row2 {
+          display: flex;
+          flex-direction: column;
+        }
+        .feat1,
+        .feat2,
+        .feat3,
+        .feat4,
+        .feat5,
+        .feat6 {
+          width: 100%;
+          height: 5em;
+          margin: 1%;
+        }
+        .feat-img {
+          width: 85%;
+        }
+        .feat-img-container {
+          margin-left: 2%;
+        }
+        .feat-content {
+          margin-top: 14%;
+          margin-left: 1%;
+          font-size: 0.6em;
+        }
+        #feat-content {
+          margin-top: 6%;
+          margin-left: 1%;
+          font-size: 0.8em;
+          font-size: 0.6em;
+        }
+        .cont-head {
+          margin-bottom: 0px;
+          font-weight: 600;
+        }
+        .img1,
+        .img2,
+        .img4,
+        .img5 {
+          padding: 1% 1% 1% 1%;
+
+          width: 100%;
+        }
       }
     </style>
     <!-- styles for student review carousel  -->
@@ -604,20 +667,28 @@
         margin-top: 5%;
         margin-left: 3%;
       }
+
+      @media (max-width: 560px) {
+        .student-slide {
+          width: 285px;
+        }
+      }
     </style>
     <!-- styles for faculty carousel  -->
     <style>
       .teacher-slide {
-        width: 65%;
+        width: 85%;
         height: fit-content;
         border-radius: 22px;
         margin-bottom: 10%;
-        box-shadow: 0px 4px 45px rgba(0, 0, 0, 0.12);
+        box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.12);
       }
 
       .teach-img {
-        width: 28%;
+        width: 30%;
         margin-top: 5%;
+        margin-bottom: 15px;
+        margin-left: 80px;
       }
 
       .teach-desc {
@@ -632,11 +703,20 @@
         line-height: 24px;
         margin-left: 0.5%;
       }
+
+      @media (max-width: 560px) {
+        .teach-img {
+          width: 30%;
+          margin-top: 5%;
+          margin-bottom: 15px;
+          margin-left: 8px;
+        }
+      }
     </style>
     <!-- styles for location carousel  -->
     <style>
       .location-slide {
-        width: 70%;
+        width: 85%;
       }
     </style>
   </head>
@@ -817,115 +897,118 @@
         <strong>What our students have to say!</strong>
       </h3>
     </center>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-12">
-          <div id="news-slider-03" class="owl-carousel">
-            <div class="post-slide student-slide">
-              <div class="post-content">
-                <img src="./stud-1.png" alt="" class="stud-img" />
-                <span class="post-title stud-desc">Vishal Kumar Gupta</span
-                ><br />
-                <span>Jabalpur</span> <br />
-                <span>AIR 9, JEE Advanced 2021</span> <br />
-                <img src="./quptes-1.png" alt="" />
-                <p class="post-description">
-                  I have been preparing for JEE since class 10th with
-                  myClassroom; my experience with myClassroom has been
-                  wonderful. The faculty here are very hardworking and are
-                  always there to help each student. The test series helped me a
-                  lot. I want to thank every member of the myClassroom for
-                  motivating me and sufficing my early need for JEE preperation.
-                </p>
-                <img src="./quotes-2.png" alt="" />
-              </div>
-            </div>
+    <div id="news-slider-03" class="owl-carousel">
+      <div class="post-slide student-slide">
+        <div class="post-content">
+          <img src="./stud-1.png" alt="" class="stud-img" />
+          <span class="post-title stud-desc">Vishal Kumar Gupta</span><br />
+          <span>Jabalpur</span> <br />
+          <span>AIR 9, JEE Advanced 2021</span> <br />
+          <img src="./quptes-1.png" alt="" />
+          <p class="post-description">
+            I have been preparing for JEE since class 10th with myClassroom; my
+            experience with myClassroom has been wonderful. The faculty here are
+            very hardworking and are always there to help each student. The test
+            series helped me a lot. I want to thank every member of the
+            myClassroom for motivating me and sufficing my early need for JEE
+            preperation.
+          </p>
+          <img src="./quotes-2.png" alt="" />
+        </div>
+      </div>
 
-            <div class="post-slide student-slide">
-              <div class="post-content">
-                <img src="./stud-1.png" alt="" class="stud-img" />
-                <span class="post-title stud-desc">Andhra Pradesh</span><br />
-                <img src="./quptes-1.png" alt="" />
-                <p class="post-description">
-                  I have been preparing for JEE since class 10th with
-                  myClassroom; my experience with myClassroom has been
-                  wonderful. The faculty here are very hardworking and are
-                  always there to help each student. The test series helped me a
-                  lot. I want to thank every member of the myClassroom for
-                  motivating me and sufficing my early need for JEE preperation.
-                </p>
-                <img src="./quotes-2.png" alt="" />
-              </div>
-            </div>
+      <div class="post-slide student-slide">
+        <div class="post-content">
+          <img src="./stud-1.png" alt="" class="stud-img" />
+          <span class="post-title stud-desc">Andhra Pradesh</span><br />
+          <span>Jabalpur</span> <br />
+          <span>AIR 9, JEE Advanced 2021</span> <br />
+          <img src="./quptes-1.png" alt="" />
+          <p class="post-description">
+            I have been preparing for JEE since class 10th with myClassroom; my
+            experience with myClassroom has been wonderful. The faculty here are
+            very hardworking and are always there to help each student. The test
+            series helped me a lot. I want to thank every member of the
+            myClassroom for motivating me and sufficing my early need for JEE
+            preperation.
+          </p>
+          <img src="./quotes-2.png" alt="" />
+        </div>
+      </div>
 
-            <div class="post-slide student-slide">
-              <div class="post-content">
-                <img src="./stud-1.png" alt="" class="stud-img" />
-                <span class="post-title stud-desc">Andhra Pradesh</span><br />
-                <img src="./quptes-1.png" alt="" />
-                <p class="post-description">
-                  I have been preparing for JEE since class 10th with
-                  myClassroom; my experience with myClassroom has been
-                  wonderful. The faculty here are very hardworking and are
-                  always there to help each student. The test series helped me a
-                  lot. I want to thank every member of the myClassroom for
-                  motivating me and sufficing my early need for JEE preperation.
-                </p>
-                <img src="./quotes-2.png" alt="" />
-              </div>
-            </div>
+      <div class="post-slide student-slide">
+        <div class="post-content">
+          <img src="./stud-1.png" alt="" class="stud-img" />
+          <span class="post-title stud-desc">Andhra Pradesh</span><br />
+          <span>Jabalpur</span> <br />
+          <span>AIR 9, JEE Advanced 2021</span> <br />
+          <img src="./quptes-1.png" alt="" />
+          <p class="post-description">
+            I have been preparing for JEE since class 10th with myClassroom; my
+            experience with myClassroom has been wonderful. The faculty here are
+            very hardworking and are always there to help each student. The test
+            series helped me a lot. I want to thank every member of the
+            myClassroom for motivating me and sufficing my early need for JEE
+            preperation.
+          </p>
+          <img src="./quotes-2.png" alt="" />
+        </div>
+      </div>
 
-            <div class="post-slide student-slide">
-              <div class="post-content">
-                <img src="./stud-1.png" alt="" class="stud-img" />
-                <span class="post-title stud-desc">Andhra Pradesh</span><br />
-                <img src="./quptes-1.png" alt="" />
-                <p class="post-description">
-                  I have been preparing for JEE since class 10th with
-                  myClassroom; my experience with myClassroom has been
-                  wonderful. The faculty here are very hardworking and are
-                  always there to help each student. The test series helped me a
-                  lot. I want to thank every member of the myClassroom for
-                  motivating me and sufficing my early need for JEE preperation.
-                </p>
-                <img src="./quotes-2.png" alt="" />
-              </div>
-            </div>
+      <div class="post-slide student-slide">
+        <div class="post-content">
+          <img src="./stud-1.png" alt="" class="stud-img" />
+          <span class="post-title stud-desc">Andhra Pradesh</span><br />
+          <span>Jabalpur</span> <br />
+          <span>AIR 9, JEE Advanced 2021</span> <br />
+          <img src="./quptes-1.png" alt="" />
+          <p class="post-description">
+            I have been preparing for JEE since class 10th with myClassroom; my
+            experience with myClassroom has been wonderful. The faculty here are
+            very hardworking and are always there to help each student. The test
+            series helped me a lot. I want to thank every member of the
+            myClassroom for motivating me and sufficing my early need for JEE
+            preperation.
+          </p>
+          <img src="./quotes-2.png" alt="" />
+        </div>
+      </div>
 
-            <div class="post-slide student-slide">
-              <div class="post-content">
-                <img src="./stud-1.png" alt="" class="stud-img" />
-                <span class="post-title stud-desc">Andhra Pradesh</span><br />
-                <img src="./quptes-1.png" alt="" />
-                <p class="post-description">
-                  I have been preparing for JEE since class 10th with
-                  myClassroom; my experience with myClassroom has been
-                  wonderful. The faculty here are very hardworking and are
-                  always there to help each student. The test series helped me a
-                  lot. I want to thank every member of the myClassroom for
-                  motivating me and sufficing my early need for JEE preperation.
-                </p>
-                <img src="./quotes-2.png" alt="" />
-              </div>
-            </div>
+      <div class="post-slide student-slide">
+        <div class="post-content">
+          <img src="./stud-1.png" alt="" class="stud-img" />
+          <span class="post-title stud-desc">Andhra Pradesh</span><br />
+          <span>Jabalpur</span> <br />
+          <span>AIR 9, JEE Advanced 2021</span> <br />
+          <img src="./quptes-1.png" alt="" />
+          <p class="post-description">
+            I have been preparing for JEE since class 10th with myClassroom; my
+            experience with myClassroom has been wonderful. The faculty here are
+            very hardworking and are always there to help each student. The test
+            series helped me a lot. I want to thank every member of the
+            myClassroom for motivating me and sufficing my early need for JEE
+            preperation.
+          </p>
+          <img src="./quotes-2.png" alt="" />
+        </div>
+      </div>
 
-            <div class="post-slide student-slide">
-              <div class="post-content">
-                <img src="./stud-1.png" alt="" class="stud-img" />
-                <span class="post-title stud-desc">Andhra Pradesh</span><br />
-                <img src="./quptes-1.png" alt="" />
-                <p class="post-description">
-                  I have been preparing for JEE since class 10th with
-                  myClassroom; my experience with myClassroom has been
-                  wonderful. The faculty here are very hardworking and are
-                  always there to help each student. The test series helped me a
-                  lot. I want to thank every member of the myClassroom for
-                  motivating me and sufficing my early need for JEE preperation.
-                </p>
-                <img src="./quotes-2.png" alt="" />
-              </div>
-            </div>
-          </div>
+      <div class="post-slide student-slide">
+        <div class="post-content">
+          <img src="./stud-1.png" alt="" class="stud-img" />
+          <span class="post-title stud-desc">Andhra Pradesh</span><br />
+          <span>Jabalpur</span> <br />
+          <span>AIR 9, JEE Advanced 2021</span> <br />
+          <img src="./quptes-1.png" alt="" />
+          <p class="post-description">
+            I have been preparing for JEE since class 10th with myClassroom; my
+            experience with myClassroom has been wonderful. The faculty here are
+            very hardworking and are always there to help each student. The test
+            series helped me a lot. I want to thank every member of the
+            myClassroom for motivating me and sufficing my early need for JEE
+            preperation.
+          </p>
+          <img src="./quotes-2.png" alt="" />
         </div>
       </div>
     </div>
@@ -956,69 +1039,65 @@
     </div>
 
     <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-12">
-          <div id="news-slider" class="owl-carousel">
-            <div class="post-slide teacher-slide">
-              <div class="post-content">
-                <span class="post-title teacher-name">Gagan Vohra</span>
-                <img src="./gagan.png" alt="" class="teach-img" />
+      <div id="news-slider" class="owl-carousel">
+        <div class="post-slide teacher-slide">
+          <div class="post-content">
+            <span class="post-title teacher-name">Gagan Vohra</span>
+            <img src="./gagan.png" alt="" class="teach-img" />
 
-                <p class="post-description">
-                  A kiddo who uses Bootstrap and Laravel in web development.
-                </p>
-              </div>
-            </div>
+            <p class="post-description container-fluid">
+              A kiddo who uses Bootstrap and Laravel in web development.
+            </p>
+          </div>
+        </div>
 
-            <div class="post-slide teacher-slide">
-              <div class="post-content">
-                <span class="post-title teacher-name">Gagan Vohra</span>
-                <img src="./gagan.png" alt="" class="teach-img" />
-                <p class="post-description">
-                  A kiddo who uses Bootstrap and Laravel in web development.
-                </p>
-              </div>
-            </div>
+        <div class="post-slide teacher-slide">
+          <div class="post-content">
+            <span class="post-title teacher-name">Gagan Vohra</span>
+            <img src="./gagan.png" alt="" class="teach-img" />
+            <p class="post-description container-fluid">
+              A kiddo who uses Bootstrap and Laravel in web development.
+            </p>
+          </div>
+        </div>
 
-            <div class="post-slide teacher-slide">
-              <div class="post-content">
-                <span class="post-title teacher-name">Gagan Vohra</span>
-                <img src="./gagan.png" alt="" class="teach-img" />
-                <p class="post-description">
-                  A kiddo who uses Bootstrap and Laravel in web development.
-                </p>
-              </div>
-            </div>
+        <div class="post-slide teacher-slide">
+          <div class="post-content">
+            <span class="post-title teacher-name">Gagan Vohra</span>
+            <img src="./gagan.png" alt="" class="teach-img" />
+            <p class="post-description container-fluid">
+              A kiddo who uses Bootstrap and Laravel in web development.
+            </p>
+          </div>
+        </div>
 
-            <div class="post-slide teacher-slide">
-              <div class="post-content">
-                <span class="post-title teacher-name">Gagan Vohra</span>
-                <img src="./gagan.png" alt="" class="teach-img" />
-                <p class="post-description">
-                  A kiddo who uses Bootstrap and Laravel in web development.
-                </p>
-              </div>
-            </div>
+        <div class="post-slide teacher-slide">
+          <div class="post-content">
+            <span class="post-title teacher-name">Gagan Vohra</span>
+            <img src="./gagan.png" alt="" class="teach-img" />
+            <p class="post-description container-fluid teach-desc">
+              A kiddo who uses Bootstrap and Laravel in web development.
+            </p>
+          </div>
+        </div>
 
-            <div class="post-slide teacher-slide">
-              <div class="post-content">
-                <span class="post-title teacher-name">Gagan Vohra</span>
-                <img src="./gagan.png" alt="" class="teach-img" />
-                <p class="post-description teach-desc">
-                  A kiddo who uses Bootstrap and Laravel in web development.
-                </p>
-              </div>
-            </div>
+        <div class="post-slide teacher-slide">
+          <div class="post-content">
+            <span class="post-title teacher-name">Gagan Vohra</span>
+            <img src="./gagan.png" alt="" class="teach-img" />
+            <p class="post-description container-fluid teach-desc">
+              A kiddo who uses Bootstrap and Laravel in web development.
+            </p>
+          </div>
+        </div>
 
-            <div class="post-slide teacher-slide">
-              <div class="post-content">
-                <span class="post-title teacher-name">Gagan Vohra</span>
-                <img src="./gagan.png" alt="" class="teach-img" />
-                <p class="post-description">
-                  A kiddo who uses Bootstrap and Laravel in web development.
-                </p>
-              </div>
-            </div>
+        <div class="post-slide teacher-slide">
+          <div class="post-content">
+            <span class="post-title teacher-name">Gagan Vohra</span>
+            <img src="./gagan.png" alt="" class="teach-img" />
+            <p class="post-description container-fluid">
+              A kiddo who uses Bootstrap and Laravel in web development.
+            </p>
           </div>
         </div>
       </div>
@@ -1151,69 +1230,75 @@
     <div class="feature-rows container-fluid">
       <div class="feature-row1">
         <div class="feat1">
-          <div>
+          <div class="feat-img-container d-flex align-items-center">
             <img src="teacher.png" alt="" class="feat-img" />
           </div>
-          <div>
-            <p>Lectures</p>
+          <div class="feat-content">
+            <p class="cont-head">Lectures</p>
             <p>3-4 Days Per Week</p>
           </div>
         </div>
         <div class="feat2">
-          <div>
+          <div class="feat-img-container d-flex align-items-center">
             <img src="./sc-2.png" alt="" class="feat-img" />
           </div>
-          <div>
-            <p>Lectures</p>
-            <p>3-4 Days Per Week</p>
+          <div class="feat-content">
+            <p class="cont-head">Pass Class Recordings</p>
+            <p>1000+ Hours Of Classes</p>
           </div>
         </div>
         <div class="feat3">
-          <div>
+          <div class="feat-img-container d-flex align-items-center">
             <img src="./sc-3.png" alt="" class="feat-img" />
           </div>
-          <div>
-            <p>Lectures</p>
-            <p>3-4 Days Per Week</p>
+          <div id="feat-content">
+            <p class="cont-head">1000+ Hours Of Classes</p>
+            <p>
+              Regular DPPS-Daily <br />
+              Problem Practice Sessions
+            </p>
           </div>
         </div>
       </div>
       <div class="feature-row2">
         <div class="feat4">
-          <div>
+          <div class="feat-img-container d-flex align-items-center">
             <img src="./sc-4.png" alt="" class="feat-img" />
           </div>
-          <div>
-            <p>Lectures</p>
-            <p>3-4 Days Per Week</p>
+          <div id="feat-content">
+            <p class="cont-head">Periodic Tests</p>
+            <p>
+              -JEE Main Level Test <br />
+              -JEE Advanced Level Test
+            </p>
           </div>
         </div>
         <div class="feat5">
-          <div>
+          <div class="feat-img-container d-flex align-items-center">
             <img src="./sc-5.png" alt="" class="feat-img" />
           </div>
-          <div>
-            <p>Lectures</p>
-            <p>3-4 Days Per Week</p>
+          <div class="feat-content">
+            <p class="cont-head">AITS</p>
+            <p>All India Test Series</p>
           </div>
         </div>
         <div class="feat6">
-          <div>
+          <div class="feat-img-container d-flex align-items-center">
             <img src="./sc-6.png" alt="" class="feat-img" />
           </div>
-          <div>
-            <p>Lectures</p>
-            <p>3-4 Days Per Week</p>
+          <div class="feat-content">
+            <p class="cont-head">Doubt Classes</p>
+            <p>Regular Doubt Classes</p>
           </div>
         </div>
       </div>
     </div>
     <center>
-      <h3 class="tag-line pt-lg-5 my-2">
+      <h3 class="tag-line pt-lg-5 my-2 mt-5">
         <strong>myClassroom Partners</strong>
       </h3>
     </center>
-    <section class="p-3 my-5 all-logos text-center">
+    <section class="p-3 pb-0 my-3 all-logos text-center">
       <div class="container-fluid text-center">
         <div class="row text-center">
           <div class="col-lg-3 col-md-3 col-sm-3 px-2 my-3">
@@ -1249,12 +1334,10 @@
             <img src="./Gyanambhari.png" alt="" class="assc-logo" />
           </div>
         </div>
-        <br />
-        <img src="./poweredby.svg" alt="" class="powered-by-logo mb-5 mt-2" />
       </div>
     </section>
     <center>
-      <h3 class="tag-line pt-lg-5 my-5">
+      <h3 class="tag-line pt-lg-5 mb-5 mt-1">
         <strong>Locate us</strong>
       </h3>
     </center>
@@ -1264,52 +1347,60 @@
       </div>
       <div class="col-lg-6">
         <div class="">
-          <div class="d-flex align-items-center">
-            <img src="./Instagram.png" alt="" class="social-media" />
-            <span
-              style="
-                font-weight: 500;
-                letter-spacing: -0.015em;
-                font-size: 1.8em;
-                line-height: 37px;
-              "
-              >Instagram abcdedghij</span
+          <div class="d-flex justify-content-center">
+            <a href="https://www.instagram.com/_myclass_room_/">
+              <img src="./Instagram.png" alt="" class="social-media" />
+              <span
+                style="
+                  font-weight: 500;
+                  letter-spacing: -0.015em;
+                  font-size: 1.8em;
+                  line-height: 37px;
+                "
+                >Instagram</span
+              ></a
             >
           </div>
-          <div class="d-flex align-items-center">
-            <img src="./Twitter.png" alt="" class="social-media" />
-            <span
-              style="
-                font-weight: 500;
-                letter-spacing: -0.015em;
-                font-size: 1.8em;
-                line-height: 37px;
-              "
-              >Twitter abcdedghij</span
+          <div class="d-flex justify-content-center">
+            <a href="https://twitter.com/my_classroom_">
+              <img src="./Twitter.png" alt="" class="social-media" />
+              <span
+                style="
+                  font-weight: 500;
+                  letter-spacing: -0.015em;
+                  font-size: 1.8em;
+                  line-height: 37px;
+                "
+                >Twitter</span
+              ></a
             >
           </div>
-          <div class="d-flex align-items-center">
-            <img src="./Linkedin.png" alt="" class="social-media" />
-            <span
-              style="
-                font-weight: 500;
-                letter-spacing: -0.015em;
-                font-size: 1.8em;
-                line-height: 37px;
-              "
-              >Linkedin abcdedghij</span
+          <div class="d-flex justify-content-center">
+            <a href="https://www.linkedin.com/company/my-class-room/">
+              <img src="./Linkedin.png" alt="" class="social-media" />
+              <span
+                style="
+                  font-weight: 500;
+                  letter-spacing: -0.015em;
+                  font-size: 1.8em;
+                  line-height: 37px;
+                "
+                >Linkedin</span
+              ></a
             >
           </div>
-          <div class="d-flex align-items-center">
-            <img src="./Facebook.png" alt="" class="social-media" />
-            <span
-              style="
-                font-weight: 500;
-                letter-spacing: -0.015em;
-                font-size: 1.8em;
-                line-height: 37px;
-              "
-              >Facebook abcdedghij</span
+          <div class="d-flex justify-content-center">
+            <a href="https://www.facebook.com/MyClassrooom"
+              ><img src="./Facebook.png" alt="" class="social-media" />
+              <span
+                style="
+                  font-weight: 500;
+                  letter-spacing: -0.015em;
+                  font-size: 1.8em;
+                  line-height: 37px;
+                "
+                >Facebook</span
+              ></a
             >
           </div>
         </div>
@@ -1320,142 +1411,136 @@
         <strong>Locations</strong>
       </h3>
     </center>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-12">
-          <div id="news-slider-02" class="owl-carousel">
-            <div class="post-slide location-slide">
-              <div class="post-content py-3">
-                <h4
-                  class="post-title"
-                  style="text-transform: uppercase; font-size: 1.1em"
-                >
-                  <strong>Andhra Pradesh</strong>
-                </h4>
-                <p
-                  class="post-description"
-                  style="
-                    font-size: 0.9em;
-                    letter-spacing: 0.015em;
-                    line-height: 149.99%;
-                  "
-                >
-                  VISHAKAPATNAM D. No. 48-14-44/3, Anand Towers, Ramatalkies
-                  Road, Asilmetta
-                </p>
-              </div>
-            </div>
+    <div id="news-slider-02" class="owl-carousel">
+      <div class="post-slide location-slide">
+        <div class="post-content py-3">
+          <h4
+            class="post-title"
+            style="text-transform: uppercase; font-size: 1.1em"
+          >
+            <strong>Andhra Pradesh</strong>
+          </h4>
+          <p
+            class="post-description"
+            style="
+              font-size: 0.9em;
+              letter-spacing: 0.015em;
+              line-height: 149.99%;
+            "
+          >
+            VISHAKAPATNAM D. No. 48-14-44/3, Anand Towers, Ramatalkies Road,
+            Asilmetta
+          </p>
+        </div>
+      </div>
 
-            <div class="post-slide location-slide">
-              <div class="post-content py-3">
-                <h4
-                  class="post-title"
-                  style="text-transform: uppercase; font-size: 1.1em"
-                >
-                  <strong>Madhya Pradesh</strong>
-                </h4>
-                <p
-                  class="post-description"
-                  style="
-                    font-size: 0.9em;
-                    letter-spacing: 0.015em;
-                    line-height: 149.99%;
-                  "
-                >
-                  VISHAKAPATNAM D. No. 48-14-44/3, Anand Towers, Ramatalkies
-                  Road, Asilmetta
-                </p>
-              </div>
-            </div>
+      <div class="post-slide location-slide">
+        <div class="post-content py-3">
+          <h4
+            class="post-title"
+            style="text-transform: uppercase; font-size: 1.1em"
+          >
+            <strong>Madhya Pradesh</strong>
+          </h4>
+          <p
+            class="post-description"
+            style="
+              font-size: 0.9em;
+              letter-spacing: 0.015em;
+              line-height: 149.99%;
+            "
+          >
+            VISHAKAPATNAM D. No. 48-14-44/3, Anand Towers, Ramatalkies Road,
+            Asilmetta
+          </p>
+        </div>
+      </div>
 
-            <div class="post-slide location-slide">
-              <div class="post-content py-3">
-                <h4
-                  class="post-title"
-                  style="text-transform: uppercase; font-size: 1.1em"
-                >
-                  <strong>uttar Pradesh</strong>
-                </h4>
-                <p
-                  class="post-description"
-                  style="
-                    font-size: 0.9em;
-                    letter-spacing: 0.015em;
-                    line-height: 149.99%;
-                  "
-                >
-                  VISHAKAPATNAM D. No. 48-14-44/3, Anand Towers, Ramatalkies
-                  Road, Asilmetta
-                </p>
-              </div>
-            </div>
+      <div class="post-slide location-slide">
+        <div class="post-content py-3">
+          <h4
+            class="post-title"
+            style="text-transform: uppercase; font-size: 1.1em"
+          >
+            <strong>uttar Pradesh</strong>
+          </h4>
+          <p
+            class="post-description"
+            style="
+              font-size: 0.9em;
+              letter-spacing: 0.015em;
+              line-height: 149.99%;
+            "
+          >
+            VISHAKAPATNAM D. No. 48-14-44/3, Anand Towers, Ramatalkies Road,
+            Asilmetta
+          </p>
+        </div>
+      </div>
 
-            <div class="post-slide location-slide">
-              <div class="post-content py-3">
-                <h4
-                  class="post-title"
-                  style="text-transform: uppercase; font-size: 1.1em"
-                >
-                  <strong>uttar Pradesh</strong>
-                </h4>
-                <p
-                  class="post-description"
-                  style="
-                    font-size: 0.9em;
-                    letter-spacing: 0.015em;
-                    line-height: 149.99%;
-                  "
-                >
-                  VISHAKAPATNAM D. No. 48-14-44/3, Anand Towers, Ramatalkies
-                  Road, Asilmetta
-                </p>
-              </div>
-            </div>
+      <div class="post-slide location-slide">
+        <div class="post-content py-3">
+          <h4
+            class="post-title"
+            style="text-transform: uppercase; font-size: 1.1em"
+          >
+            <strong>uttar Pradesh</strong>
+          </h4>
+          <p
+            class="post-description"
+            style="
+              font-size: 0.9em;
+              letter-spacing: 0.015em;
+              line-height: 149.99%;
+            "
+          >
+            VISHAKAPATNAM D. No. 48-14-44/3, Anand Towers, Ramatalkies Road,
+            Asilmetta
+          </p>
+        </div>
+      </div>
 
-            <div class="post-slide location-slide">
-              <div class="post-content py-3">
-                <h4
-                  class="post-title"
-                  style="text-transform: uppercase; font-size: 1.1em"
-                >
-                  <strong>Andhra Pradesh</strong>
-                </h4>
-                <p
-                  class="post-description"
-                  style="
-                    font-size: 0.9em;
-                    letter-spacing: 0.015em;
-                    line-height: 149.99%;
-                  "
-                >
-                  VISHAKAPATNAM D. No. 48-14-44/3, Anand Towers, Ramatalkies
-                  Road, Asilmetta
-                </p>
-              </div>
-            </div>
+      <div class="post-slide location-slide">
+        <div class="post-content py-3">
+          <h4
+            class="post-title"
+            style="text-transform: uppercase; font-size: 1.1em"
+          >
+            <strong>Andhra Pradesh</strong>
+          </h4>
+          <p
+            class="post-description"
+            style="
+              font-size: 0.9em;
+              letter-spacing: 0.015em;
+              line-height: 149.99%;
+            "
+          >
+            VISHAKAPATNAM D. No. 48-14-44/3, Anand Towers, Ramatalkies Road,
+            Asilmetta
+          </p>
+        </div>
+      </div>
 
-            <div class="post-slide location-slide">
-              <div class="post-content py-3">
-                <h4
-                  class="post-title"
-                  style="text-transform: uppercase; font-size: 1.1em"
-                >
-                  <strong>Andhra Pradesh</strong>
-                </h4>
-                <p
-                  class="post-description"
-                  style="
-                    font-size: 0.9em;
-                    letter-spacing: 0.015em;
-                    line-height: 149.99%;
-                  "
-                >
-                  VISHAKAPATNAM D. No. 48-14-44/3, Anand Towers, Ramatalkies
-                  Road, Asilmetta
-                </p>
-              </div>
-            </div>
-          </div>
+      <div class="post-slide location-slide">
+        <div class="post-content py-3">
+          <h4
+            class="post-title"
+            style="text-transform: uppercase; font-size: 1.1em"
+          >
+            <strong>Andhra Pradesh</strong>
+          </h4>
+          <p
+            class="post-description"
+            style="
+              font-size: 0.9em;
+              letter-spacing: 0.015em;
+              line-height: 149.99%;
+            "
+          >
+            VISHAKAPATNAM D. No. 48-14-44/3, Anand Towers, Ramatalkies Road,
+            Asilmetta
+          </p>
         </div>
       </div>
     </div>
