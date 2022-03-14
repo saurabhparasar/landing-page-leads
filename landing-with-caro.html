@@ -35,6 +35,10 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/f71023b328.js"
+      crossorigin="anonymous"
+    ></script>
     <style>
       .all-logos-img {
         width: 95%;
@@ -46,10 +50,16 @@
 
       .assc-logo {
         width: 85%;
+        padding: 4%;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.21);
+        height: 6em;
       }
 
       .nano {
-        width: 42%;
+        width: 65%;
+        padding: 4% 6%;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.21);
+        height: 6em;
       }
 
       body {
@@ -151,7 +161,7 @@
         background: #fff;
         position: absolute;
         top: 35%;
-        right: -13px;
+        right: 0;
         padding: 0 8px 0 18px;
         border-radius: 50px;
 
@@ -470,6 +480,10 @@
         margin-top: 6%;
         margin-left: 1%;
       }
+      #feat-content {
+        margin-top: 4%;
+        margin-left: 1%;
+      }
       .cont-head {
         margin-bottom: 0px;
         font-weight: 600;
@@ -486,11 +500,12 @@
         }
 
         .assc-logo {
-          width: 60%;
+          width: 70%;
+          height: 4.8em;
         }
 
         .nano {
-          width: 30%;
+          width: 50%;
         }
       }
 
@@ -587,6 +602,7 @@
         .row2 {
           display: flex;
           flex-direction: column;
+          width: 50%;
         }
 
         .comp-rows {
@@ -625,7 +641,7 @@
           font-size: 0.6em;
         }
         #feat-content {
-          margin-top: 6%;
+          margin-top: 4%;
           margin-left: 1%;
           font-size: 0.8em;
           font-size: 0.6em;
@@ -639,8 +655,34 @@
         .img4,
         .img5 {
           padding: 1% 1% 1% 1%;
-
           width: 100%;
+          height: 7em;
+        }
+        .img3,
+        .img6 {
+          margin-right: 1%;
+          width: 100%;
+          height: 7em;
+        }
+        .content-head {
+          font-size: 10px;
+          line-height: 16px;
+        }
+        #content-head {
+          margin-bottom: 0%;
+        }
+        .comp-img {
+          width: 18%;
+          height: 1.3em;
+          margin-right: 10px;
+        }
+        .content-desc {
+          font-size: 10px;
+          line-height: 16px;
+        }
+        .img-head {
+          display: flex;
+          flex-direction: row;
         }
       }
     </style>
@@ -654,16 +696,20 @@
       }
 
       .stud-desc {
-        margin-bottom: 30%;
+        margin-bottom: 50%;
         text-transform: uppercase;
         letter-spacing: -0.015em;
         font-weight: 600;
         line-height: 24px;
-        margin-left: 2.5%;
       }
-
+      .top-head {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 5%;
+        margin-top: 5%;
+      }
       .stud-img {
-        width: 28%;
+        width: 80%;
         margin-top: 5%;
         margin-left: 3%;
       }
@@ -719,9 +765,132 @@
         width: 85%;
       }
     </style>
+    <style>
+      .mom-logo-container {
+        width: 35%;
+      }
+
+      .mom-logo {
+        width: 70%;
+        padding-top: 5px;
+      }
+
+      .pow-logo-container {
+        width: 35%;
+      }
+      .pow-logo {
+        width: 68%;
+        padding-top: 20px;
+      }
+
+      .nav-container {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .contact-box {
+        color: #012c63;
+        border: 2px solid #012c63;
+        border-radius: 50px;
+        position: absolute;
+        padding: 5px 10px;
+        top: 11%;
+        right: 10%;
+      }
+      .n-v-mob {
+        display: none;
+      }
+      @media (max-width: 960px) {
+        .contact {
+          padding: 10px;
+          color: #012c63;
+          border: 2px solid #012c63;
+          border-radius: 60px;
+          height: 2.5em;
+          position: absolute;
+          right: 15%;
+          top: 5%;
+        }
+      }
+      @media (max-width: 560px) {
+        .nav-container {
+          display: flex;
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+          padding-bottom: 2.5%;
+          margin-bottom: 25px;
+        }
+
+        .pow-logo-container {
+          width: 100%;
+        }
+
+        .mom-logo-container {
+          width: 100%;
+        }
+
+        .mom-logo {
+          width: 55%;
+          padding-left: 1%;
+          padding-top: 5px;
+        }
+
+        .pow-logo {
+          width: 55%;
+          padding-top: 0;
+          padding-left: 1%;
+        }
+
+        .content {
+          margin-top: 40px;
+          font-size: 1.2em;
+          margin-bottom: 20px;
+          text-align: justify !important;
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+        .contact {
+          padding: 10px;
+          color: #012c63;
+          border: 2px solid #012c63;
+          border-radius: 60px;
+          height: 2.5em;
+          position: absolute;
+          right: 17px;
+          top: 7.5%;
+        }
+        .contact-box {
+          width: 13%;
+        }
+      }
+    </style>
   </head>
 
   <body>
+    <div class="nav-container n-v-mob">
+      <div class="logos">
+        <div class="m-2 align-self-center mom-logo-container text-center">
+          <img
+            src="https://f2.leadsquaredcdn.com/t/zinedu/content/common/images/Deeksha.png"
+            alt=""
+            class="mom-logo"
+          />
+        </div>
+        <div class="m-2 align-self-center pow-logo-container text-center">
+          <img
+            src="https://f2.leadsquaredcdn.com/t/zinedu/content/common/images/myclass_pow.png"
+            alt=""
+            class="pow-logo"
+          />
+        </div>
+      </div>
+      <div class="contact-box">
+        <a
+          href="tel: +917413053555"
+          onClick="ga('send', 'event', { eventCategory: 'ButtonClick', eventAction: 'Call Button Click', eventLabel: 'Call Generated'});"
+          ><i class="fa-solid fa-phone contact"></i>
+        </a>
+      </div>
+    </div>
     <div class="nav-container-web mt-3">
       <div class="first">
         <div class="logos ml-4">
@@ -765,9 +934,9 @@
         </div>
       </div>
       <div class="second">
-        <div class="contact mr-4">
+        <div class="contacts mr-4">
           <a href="tel:+919164 051 051" class="contact-a">
-            <span><i class="fa-solid fa-phone"></i></span>
+            <span class="contact-box"><i class="fa-solid fa-phone"></i></span>
             <span class="contact-num">+919164051051</span>
           </a>
         </div>
@@ -900,10 +1069,15 @@
     <div id="news-slider-03" class="owl-carousel">
       <div class="post-slide student-slide">
         <div class="post-content">
-          <img src="./stud-1.png" alt="" class="stud-img" />
-          <span class="post-title stud-desc">Vishal Kumar Gupta</span><br />
-          <span>Jabalpur</span> <br />
-          <span>AIR 9, JEE Advanced 2021</span> <br />
+          <div class="top-head">
+            <div><img src="./stud-1.png" alt="" class="stud-img" /></div>
+            <div class="stud-description">
+              <span class="post-title stud-desc">Vishal Kumar Gupta</span><br />
+              <span>Jabalpur</span> <br />
+              <span>AIR 9, JEE Advanced 2021</span> <br />
+            </div>
+          </div>
+
           <img src="./quptes-1.png" alt="" />
           <p class="post-description">
             I have been preparing for JEE since class 10th with myClassroom; my
@@ -919,10 +1093,14 @@
 
       <div class="post-slide student-slide">
         <div class="post-content">
-          <img src="./stud-1.png" alt="" class="stud-img" />
-          <span class="post-title stud-desc">Andhra Pradesh</span><br />
-          <span>Jabalpur</span> <br />
-          <span>AIR 9, JEE Advanced 2021</span> <br />
+          <div class="top-head">
+            <div><img src="./stud-1.png" alt="" class="stud-img" /></div>
+            <div class="stud-description">
+              <span class="post-title stud-desc">Vishal Kumar Gupta</span><br />
+              <span>Jabalpur</span> <br />
+              <span>AIR 9, JEE Advanced 2021</span> <br />
+            </div>
+          </div>
           <img src="./quptes-1.png" alt="" />
           <p class="post-description">
             I have been preparing for JEE since class 10th with myClassroom; my
@@ -938,10 +1116,14 @@
 
       <div class="post-slide student-slide">
         <div class="post-content">
-          <img src="./stud-1.png" alt="" class="stud-img" />
-          <span class="post-title stud-desc">Andhra Pradesh</span><br />
-          <span>Jabalpur</span> <br />
-          <span>AIR 9, JEE Advanced 2021</span> <br />
+          <div class="top-head">
+            <div><img src="./stud-1.png" alt="" class="stud-img" /></div>
+            <div class="stud-description">
+              <span class="post-title stud-desc">Vishal Kumar Gupta</span><br />
+              <span>Jabalpur</span> <br />
+              <span>AIR 9, JEE Advanced 2021</span> <br />
+            </div>
+          </div>
           <img src="./quptes-1.png" alt="" />
           <p class="post-description">
             I have been preparing for JEE since class 10th with myClassroom; my
@@ -957,10 +1139,14 @@
 
       <div class="post-slide student-slide">
         <div class="post-content">
-          <img src="./stud-1.png" alt="" class="stud-img" />
-          <span class="post-title stud-desc">Andhra Pradesh</span><br />
-          <span>Jabalpur</span> <br />
-          <span>AIR 9, JEE Advanced 2021</span> <br />
+          <div class="top-head">
+            <div><img src="./stud-1.png" alt="" class="stud-img" /></div>
+            <div class="stud-description">
+              <span class="post-title stud-desc">Vishal Kumar Gupta</span><br />
+              <span>Jabalpur</span> <br />
+              <span>AIR 9, JEE Advanced 2021</span> <br />
+            </div>
+          </div>
           <img src="./quptes-1.png" alt="" />
           <p class="post-description">
             I have been preparing for JEE since class 10th with myClassroom; my
@@ -976,10 +1162,14 @@
 
       <div class="post-slide student-slide">
         <div class="post-content">
-          <img src="./stud-1.png" alt="" class="stud-img" />
-          <span class="post-title stud-desc">Andhra Pradesh</span><br />
-          <span>Jabalpur</span> <br />
-          <span>AIR 9, JEE Advanced 2021</span> <br />
+          <div class="top-head">
+            <div><img src="./stud-1.png" alt="" class="stud-img" /></div>
+            <div class="stud-description">
+              <span class="post-title stud-desc">Vishal Kumar Gupta</span><br />
+              <span>Jabalpur</span> <br />
+              <span>AIR 9, JEE Advanced 2021</span> <br />
+            </div>
+          </div>
           <img src="./quptes-1.png" alt="" />
           <p class="post-description">
             I have been preparing for JEE since class 10th with myClassroom; my
@@ -995,10 +1185,14 @@
 
       <div class="post-slide student-slide">
         <div class="post-content">
-          <img src="./stud-1.png" alt="" class="stud-img" />
-          <span class="post-title stud-desc">Andhra Pradesh</span><br />
-          <span>Jabalpur</span> <br />
-          <span>AIR 9, JEE Advanced 2021</span> <br />
+          <div class="top-head">
+            <div><img src="./stud-1.png" alt="" class="stud-img" /></div>
+            <div class="stud-description">
+              <span class="post-title stud-desc">Vishal Kumar Gupta</span><br />
+              <span>Jabalpur</span> <br />
+              <span>AIR 9, JEE Advanced 2021</span> <br />
+            </div>
+          </div>
           <img src="./quptes-1.png" alt="" />
           <p class="post-description">
             I have been preparing for JEE since class 10th with myClassroom; my
@@ -1110,17 +1304,16 @@
     <div class="comp-rows container-fluid">
       <div class="row1">
         <div class="img1">
-          <div>
+          <div class="img-head">
             <img src="./cl-1.png" alt="" class="comp-img" />
             <p class="content-head">Never miss a class</p>
           </div>
           <p class="content-desc">
-            Get access to all the class recordings<br />
-            and notes
+            Get access to all the class recordings and notes
           </p>
         </div>
         <div class="img2">
-          <div>
+          <div class="img-head">
             <img src="./cl-2.png" alt="" class="comp-img" />
             <p class="content-head">Compete in real-time with peers</p>
           </div>
@@ -1130,7 +1323,7 @@
           </p>
         </div>
         <div class="img3">
-          <div>
+          <div class="img-head">
             <img src="./cl-3.png" alt="" class="comp-img" />
             <p class="content-head">Instant doubt solving</p>
           </div>
@@ -1141,16 +1334,18 @@
       </div>
       <div class="row2">
         <div class="img4">
-          <div>
+          <div class="img-head">
             <img src="./cl-4.png" alt="" class="comp-img" />
-            <p class="content-head">Instant doubt solving</p>
+            <p class="content-head" id="content-head">
+              Consistency beats talent
+            </p>
           </div>
           <p class="content-desc">
             Consistent DPPs and tests with comprehensive reports
           </p>
         </div>
         <div class="img5">
-          <div>
+          <div class="img-head">
             <img src="./cl-5.png" alt="" class="comp-img" />
             <p class="content-head">Practice leads to perfection</p>
           </div>
@@ -1159,9 +1354,11 @@
           </p>
         </div>
         <div class="img6">
-          <div>
+          <div class="img-head">
             <img src="./cl-6.png" alt="" class="comp-img" />
-            <p class="content-head">Discipline is everything</p>
+            <p class="content-head" id="content-head">
+              Discipline is everything
+            </p>
           </div>
           <p class="content-desc">
             Regular reports to ensure discipline and track progress
@@ -1242,8 +1439,8 @@
           <div class="feat-img-container d-flex align-items-center">
             <img src="./sc-2.png" alt="" class="feat-img" />
           </div>
-          <div class="feat-content">
-            <p class="cont-head">Pass Class Recordings</p>
+          <div id="feat-content">
+            <p class="cont-head">Past Class Recordings</p>
             <p>1000+ Hours Of Classes</p>
           </div>
         </div>
@@ -1303,35 +1500,67 @@
         <div class="row text-center">
           <div class="col-lg-3 col-md-3 col-sm-3 px-2 my-3">
             <img
-              src="./Associate logo(RGB)-02 1.svg"
+              src="https://f2.leadsquaredcdn.com/t/zinedu/content/common/images/iit-medical.png"
               alt=""
               class="assc-logo"
             />
           </div>
           <div class="col-lg-3 ol-md-3 col-sm-3 px-2 my-3">
-            <img src="./nano.svg" alt="" class="nano" />
+            <img
+              src="https://f2.leadsquaredcdn.com/t/zinedu/content/common/images/nano.png"
+              alt=""
+              class="nano"
+            />
           </div>
           <div class="col-lg-3 col-md-3 col-sm-3 px-2 my-3">
-            <img src="./aviral.svg" alt="" class="assc-logo" />
+            <img
+              src="https://f2.leadsquaredcdn.com/t/zinedu/content/common/images/aviral.png"
+              alt=""
+              class="assc-logo"
+            />
           </div>
           <div class="col-lg-3 col-md-3 col-sm-3 px-2 my-3">
-            <img src="./puruda.svg" alt="" class="assc-logo" />
+            <img
+              src="https://f2.leadsquaredcdn.com/t/zinedu/content/common/images/Puruda_LOgo_1_.png"
+              alt=""
+              class="assc-logo"
+            />
           </div>
           <div class="col-lg-3 col-md-3 col-sm-3 px-2 my-3">
-            <img src="./Group.svg" alt="" class="assc-logo" />
+            <img
+              src="https://f2.leadsquaredcdn.com/t/zinedu/content/common/images/Momentum%20orignal%20Logo-01%201.png"
+              alt=""
+              class="assc-logo"
+            />
           </div>
           <div class="col-lg-3 col-md-3 col-sm-3 px-2 my-3">
-            <img src="./Sanjjevi.svg" alt="" class="assc-logo" />
+            <img
+              src="https://f2.leadsquaredcdn.com/t/zinedu/content/common/images/sanjeevi.png"
+              alt=""
+              class="assc-logo"
+            />
           </div>
           <div class="col-lg-3 col-md-3 col-sm-3 px-2 my-3">
-            <img src="./PHONEIX LOGO png 02 1.svg" alt="" class="assc-logo" />
+            <img
+              src="https://f2.leadsquaredcdn.com/t/zinedu/content/common/images/phonenix.png"
+              alt=""
+              class="assc-logo"
+            />
           </div>
 
           <div class="col-lg-3 col-md-3 col-sm-3 px-2 my-3">
-            <img src="./Deeksha.png" alt="" class="assc-logo" />
+            <img
+              src="https://f2.leadsquaredcdn.com/t/zinedu/content/common/images/Deeksha.png"
+              alt=""
+              class="assc-logo"
+            />
           </div>
           <div class="col-lg-3 col-md-3 col-sm-3 px-2 my-3">
-            <img src="./Gyanambhari.png" alt="" class="assc-logo" />
+            <img
+              src="https://f2.leadsquaredcdn.com/t/zinedu/content/common/images/gyanambhari%201.png"
+              alt=""
+              class="assc-logo"
+            />
           </div>
         </div>
       </div>
